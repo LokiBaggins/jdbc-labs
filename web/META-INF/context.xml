@@ -36,6 +36,17 @@
               driverClassName="com.mysql.jdbc.Driver"
               url="jdbc:mysql://localhost:3306/training_db"/>
 
+    <Resource name="jdbc/QuestionsDB"
+              auth="Container"
+              type="javax.sql.DataSource"
+              maxTotal="5"
+              maxIdle="5"
+              maxWaitMillis="10000"
+              username="root"
+              password="123456"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/questions_db"/>
+
     <!--<ResourceLink name="jdbc/TrainingDB" global="jdbc/TrainingDB" type="javax.sql.DataSource"/>-->
 
 </Context>

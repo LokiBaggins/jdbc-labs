@@ -24,7 +24,7 @@ public class ConnectionPool {
 //            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/training_db", "root", "123456");
             Context context = new InitialContext();
             Context root = (Context) context.lookup("java:comp/env");
-            DataSource dataSource = (DataSource) root.lookup("jdbc/TrainingDB");
+            DataSource dataSource = (DataSource) root.lookup("jdbc/QuestionsDB");
             conn = dataSource.getConnection();
         } catch (SQLException e) {
             throw new RuntimeException(e);

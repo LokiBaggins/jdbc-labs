@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public class QuestionBean implements Serializable {
     private String text;
-    private long id ;
-    private long correctAnswerId ;
+    private long id;
+    private long correctAnswerId;
 
     public QuestionBean() {
     }

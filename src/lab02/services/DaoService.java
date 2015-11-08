@@ -21,7 +21,7 @@ public class DaoService {
         PreparedStatement selData;
         ResultSet rs;
 //        String selDataStr = "SELECT * FROM categories;";
-        String selDataStr = "SELECT * FROM roles;";
+        String selDataStr = "SELECT * FROM answers;";
 
         try ( Connection conn = ConnectionPool.getInstance().getConnection()) {
             selData = conn.prepareStatement(selDataStr);
@@ -30,8 +30,8 @@ public class DaoService {
             while (rs.next()) {
                 ab = new AnswerBean();
                 ab.setId(rs.getInt("ID"));
-                ab.setText(rs.getString("ROLE_NAME"));
-//                ab.setText(rs.getString("CATEGORY_NAME"));
+                ab.setText(rs.getString("TEXT"));
+                ab.setQuestion_id(rs.getInt("QUESTION_ID"));
 
                 answers.add(ab);
             }

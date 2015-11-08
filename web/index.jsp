@@ -5,16 +5,25 @@
 <html>
   <head>
     <title></title>
+    <style>
+      table, td {
+        border: 1px solid grey;
+        text-align: center;
+      }
+      td {
+        padding: 0 5px;
+      }
+    </style>
   </head>
   <body>
     <h1>Welcome JSP page_update1</h1>
-
-    <h3>BEFORE_TABLE</h3>
+    <h3>Answers</h3>
     <table>
       <thead>
         <tr>
-          <td>ID</td>
-          <td>CATEGORY_NAME</td>
+          <th>ID</th>
+          <th>TEXT</th>
+          <th>QUESTION_ID</th>
         </tr>
       </thead>
       <tbody>
@@ -25,6 +34,7 @@
         <tr>
           <td><%= ab.getId() %></td>
           <td><%= ab.getText() %></td>
+          <td><%= ab.getQuestion_id() %></td>
         </tr>
       <%
         }
