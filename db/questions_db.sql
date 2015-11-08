@@ -11,23 +11,22 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Dumping database structure for questions_db
-DROP DATABASE IF EXISTS `questions_db`;
 CREATE DATABASE IF NOT EXISTS `questions_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `questions_db`;
 
 -- Dumping data for table questions_db.answers: ~9 rows (approximately)
 DELETE FROM `answers`;
 /*!40000 ALTER TABLE `answers` DISABLE KEYS */;
-INSERT INTO `answers` (`ID`, `TEXT`, `QUESTION_ID`) VALUES
-	(1, 'answer1', 1),
-	(2, 'answer2', 1),
-	(3, 'answer3', 1),
-	(4, 'answer4', 2),
-	(5, 'answer5', 2),
-	(6, 'answer6', 2),
-	(7, 'answer7', 3),
-	(8, 'answer8', 3),
-	(9, 'answer9', 3);
+INSERT INTO `answers` (`ID`, `TEXT`) VALUES
+	(1, 'answer1'),
+	(2, 'answer2'),
+	(3, 'answer3'),
+	(4, 'answer4'),
+	(5, 'answer5'),
+	(6, 'answer6'),
+	(7, 'answer7'),
+	(8, 'answer8'),
+	(9, 'answer9');
 /*!40000 ALTER TABLE `answers` ENABLE KEYS */;
 
 -- Dumping data for table questions_db.questions: ~3 rows (approximately)

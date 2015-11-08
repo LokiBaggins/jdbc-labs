@@ -1,6 +1,6 @@
+<%@ page import="lab02.beans.AnswerBean" %>
 <%@ page import="java.util.List" %>
 <%@ page import="lab02.services.DaoService" %>
-<%@ page import="lab02.beans.QuestionBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -22,17 +22,18 @@
   <tr>
     <th>ID</th>
     <th>TEXT</th>
-    <%--<th>QUESTION_ID</th>--%>
+    <th>QUESTION_ID</th>
   </tr>
   </thead>
   <tbody>
   <%
-    List<QuestionBean> questions = DaoService.getAllQuestions();
-    for(QuestionBean qb : questions) {
+    List<AnswerBean> answers = DaoService.getAllAnswers();
+    for(AnswerBean ab : answers) {
   %>
   <tr>
-    <td><%= qb.getId() %></td>
-    <td><a href="question.jsp" value="<%= qb.getId() %>"><%= qb.getText() %></a></td>
+    <td><%= ab.getId() %></td>
+    <td><%= ab.getText() %></td>
+    <td><%= ab.getQuestion_id() %></td>
   </tr>
   <%
     }

@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class AnswerBean implements Serializable {
     private int id;
     private String text;
-    private int question_id;
+    private int isCorrect;
 
     public AnswerBean() {
     }
@@ -26,12 +26,12 @@ public class AnswerBean implements Serializable {
         this.text = text;
     }
 
-    public int getQuestion_id() {
-        return question_id;
+    public int getIsCorrect() {
+        return isCorrect;
     }
 
-    public void setQuestion_id(int question_id) {
-        this.question_id = question_id;
+    public void setIsCorrect(int isCorrect) {
+        this.isCorrect = isCorrect;
     }
 
     @Override
