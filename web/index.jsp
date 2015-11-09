@@ -1,5 +1,5 @@
 <%@ page import="java.util.List" %>
-<%@ page import="lab02.services.DaoService" %>
+<%@ page import="lab02.services.QuestionService" %>
 <%@ page import="lab02.beans.QuestionBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -27,7 +27,7 @@
   </thead>
   <tbody>
   <%
-    List<QuestionBean> questions = DaoService.getAllQuestions();
+    List<QuestionBean> questions = lab02.services.QuestionService.getAllQuestions();
     for(QuestionBean qb : questions) {
   %>
   <tr>

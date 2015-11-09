@@ -1,6 +1,7 @@
 <%@ page import="lab02.beans.AnswerBean" %>
 <%@ page import="java.util.List" %>
-<%@ page import="lab02.services.DaoService" %>
+<%@ page import="lab02.services.QuestionService" %>
+<%@ page import="lab02.services.AnswersServices" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -27,7 +28,7 @@
   </thead>
   <tbody>
   <%
-    List<AnswerBean> answers = DaoService.getAllAnswers();
+    List<AnswerBean> answers = AnswersServices.getAllAnswers();
     for(AnswerBean ab : answers) {
   %>
   <tr>
