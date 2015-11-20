@@ -1,5 +1,4 @@
 <%@ page import="java.util.List" %>
-<%@ page import="lab02.services.QuestionService" %>
 <%@ page import="lab02.beans.QuestionBean" %>
 <%@ page import="lab02.beans.AnswerBean" %>
 <%@ page import="lab02.services.AnswersServices" %>
@@ -7,19 +6,12 @@
 <html>
 <head>
   <title></title>
-  <style>
-    table, td {
-      border: 1px solid grey;
-      text-align: center;
-    }
-    td {
-      padding: 0 5px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles/styles.css" >
 </head>
 <body>
     <%
-      QuestionBean question = lab02.services.QuestionService.getQuestionById(1);
+      long qId = Long.parseLong(request.getParameter("id"));
+      QuestionBean question = lab02.services.QuestionService.getQuestionById(qId);
     %>
 <h3>Question #<%= question.getId() %></h3>
 
